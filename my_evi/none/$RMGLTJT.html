@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+      align-content: center;
+    }
+
+    /* Add smooth scrolling behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Responsive styles for small screens */
+    @media screen and (max-width: 600px) {
+      .navbar a {
+        float: none;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    /* Style the iframe */
+    iframe {
+      width: 100%;
+      height: 80vh; /* Adjust the height as needed */
+      border: none;
+    }
+  </style>
+  <title>Navigation Bar with Iframe</title>
+</head>
+<body>
+<center>
+  <div class="navbar">
+    <a href="#home"><iframe src="http://127.0.0.1:5000" id="contentFrame"></iframe>Home</a>
+    <a href="#about"><iframe src="http://127.0.0.1:5000" id="contentFrame"></iframe>About</a>
+    <a href="#services"><iframe src="http://127.0.0.1:5000" id="contentFrame"></iframe>Services</a>
+    <a href="#contact"><iframe src="http://127.0.0.1:5000" id="contentFrame"></iframe>Contact</a>
+  </div>
+</center>
+  <!-- Iframe to embed content from another HTML file or website -->
+  
+
+  <script>
+    // Add smooth scrolling behavior for internal links
+    document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
