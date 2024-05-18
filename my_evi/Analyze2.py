@@ -73,7 +73,7 @@ def non(text):
 
     # mking prediction
 
-    loaded_model = pickle.load(open('D:/aff/evi/new1/2_spam_checker_model.sav', 'rb'))
+    loaded_model = pickle.load(open('D:/aff/evi/my_evi/2_spam_checker_model.sav', 'rb'))
 
     prediction = loaded_model.predict(input_data_feature)
     print(prediction)
